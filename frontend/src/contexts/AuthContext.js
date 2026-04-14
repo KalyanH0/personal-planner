@@ -1,8 +1,14 @@
-import React, { createContext, useContext, useState, useEffect, useCallback } from 'react';
+import React, {
+  createContext,
+  useContext,
+  useState,
+  useEffect,
+  useCallback,
+} from 'react';
 import axios from 'axios';
 
 const AuthContext = createContext(null);
-const API = process.env.REACT_APP_BACKEND_URL;
+const API = process.env.REACT_APP_BACKEND_URL || 'http://localhost:8000';
 
 export function AuthProvider({ children }) {
   const [user, setUser] = useState(null);
@@ -10,7 +16,9 @@ export function AuthProvider({ children }) {
 
   const checkAuth = useCallback(async () => {
     try {
-      const { data } = await axios.get(`${API}/api/auth/me`, { withCredentials: true });
+      const { data } = await axios.get(`${API}/api/auth/me`, {
+        withCredentials: true,
+      });
       setUser(data);
     } catch {
       setUser(null);
@@ -19,16 +27,26 @@ export function AuthProvider({ children }) {
     }
   }, []);
 
-  useEffect(() => { checkAuth(); }, [checkAuth]);
+  useEffect(() => {
+    checkAuth();
+  }, [checkAuth]);
 
   const login = async (email, password) => {
-    const { data } = await axios.post(`${API}/api/auth/login`, { email, password }, { withCredentials: true });
+    const { data } = await axios.post(
+      `${API}/api/auth/login`,
+      { email, password },
+      { withCredentials: true },
+    );
     setUser(data);
     return data;
   };
 
   const register = async (email, password, name) => {
-    const { data } = await axios.post(`${API}/api/auth/register`, { email, password, name }, { withCredentials: true });
+    const { data } = await axios.post(
+      `${API}/api/auth/register`,
+      { email, password, name },
+      { withCredentials: true },
+    );
     setUser(data);
     return data;
   };

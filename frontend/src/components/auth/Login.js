@@ -7,7 +7,8 @@ import { Envelope, Lock, SignIn, CircleNotch } from '@phosphor-icons/react';
 function formatApiError(detail) {
   if (detail == null) return 'Something went wrong.';
   if (typeof detail === 'string') return detail;
-  if (Array.isArray(detail)) return detail.map(e => e?.msg || JSON.stringify(e)).join(' ');
+  if (Array.isArray(detail))
+    return detail.map((e) => e?.msg || JSON.stringify(e)).join(' ');
   return String(detail);
 }
 
@@ -44,12 +45,16 @@ export default function Login() {
           <div className="auth-logo-ring">
             <SignIn size={28} weight="bold" color="#00E5FF" />
           </div>
-          <h1 className="auth-title">Pulse</h1>
+          <h1 className="auth-title">Personal Planner</h1>
           <p className="auth-tagline">Your intelligent daily planner</p>
         </div>
 
         <form onSubmit={handleSubmit} className="auth-form">
-          {error && <div className="auth-error" data-testid="login-error">{error}</div>}
+          {error && (
+            <div className="auth-error" data-testid="login-error">
+              {error}
+            </div>
+          )}
 
           <div className="auth-input-group">
             <Envelope size={20} weight="regular" className="auth-input-icon" />
@@ -59,7 +64,7 @@ export default function Login() {
               placeholder="Email address"
               className="input-field auth-input"
               value={email}
-              onChange={e => setEmail(e.target.value)}
+              onChange={(e) => setEmail(e.target.value)}
               required
             />
           </div>
@@ -72,7 +77,7 @@ export default function Login() {
               placeholder="Password"
               className="input-field auth-input"
               value={password}
-              onChange={e => setPassword(e.target.value)}
+              onChange={(e) => setPassword(e.target.value)}
               required
             />
           </div>
@@ -83,12 +88,19 @@ export default function Login() {
             className="btn-primary auth-submit"
             disabled={loading}
           >
-            {loading ? <CircleNotch size={20} className="spinner" /> : 'Sign In'}
+            {loading ? (
+              <CircleNotch size={20} className="spinner" />
+            ) : (
+              'Sign In'
+            )}
           </button>
         </form>
 
         <p className="auth-switch">
-          No account? <Link to="/register" data-testid="go-to-register">Create one</Link>
+          No account?{' '}
+          <Link to="/register" data-testid="go-to-register">
+            Create one
+          </Link>
         </p>
       </motion.div>
 
@@ -140,7 +152,7 @@ export default function Login() {
           font-size: 36px;
           font-weight: 900;
           letter-spacing: -0.04em;
-          background: linear-gradient(135deg, #00E5FF, #0088FF);
+          background: linear-gradient(135deg, #f1f3f3ff, #f9fafcff);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           background-clip: text;

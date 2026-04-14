@@ -5,19 +5,21 @@
   --bg-surface: rgba(255, 255, 255, 0.03);
   --bg-glass: rgba(15, 15, 20, 0.4);
   --glass-border: rgba(255, 255, 255, 0.08);
-  --primary: #00E5FF;
-  --primary-hover: #66F0FF;
+  --primary: #00e5ff;
+  --primary-hover: #66f0ff;
   --primary-glow: rgba(0, 229, 255, 0.3);
-  --secondary: #0088FF;
-  --accent: #00FFB2;
-  --warning: #FFB800;
-  --danger: #FF3B30;
-  --text-primary: #FFFFFF;
-  --text-secondary: #A1A1AA;
-  --text-muted: #71717A;
+  --secondary: #0088ff;
+  --accent: #00ffb2;
+  --warning: #ffb800;
+  --danger: #ff3b30;
+  --text-primary: #ffffff;
+  --text-secondary: #a1a1aa;
+  --text-muted: #71717a;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -42,16 +44,25 @@ body {
   min-height: 100vh;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: 'Unbounded', cursive;
   color: var(--text-primary);
 }
 
-code, pre {
+code,
+pre {
   font-family: 'JetBrains Mono', monospace;
 }
 
-input, textarea, select, button {
+input,
+textarea,
+select,
+button {
   font-family: 'Manrope', sans-serif;
 }
 
@@ -73,5 +84,5 @@ input, textarea, select, button {
 
 input:-webkit-autofill {
   -webkit-box-shadow: 0 0 0 50px #050505 inset;
-  -webkit-text-fill-color: #FFFFFF;
+  -webkit-text-fill-color: #ffffff;
 }
