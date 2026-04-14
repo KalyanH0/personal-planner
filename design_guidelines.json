@@ -1,0 +1,109 @@
+{
+  "theme": "dark",
+  "archetype": "Archetype 7: Electric & Neon (Refined to Neo-Glass High-End)",
+  "rationale": "The user explicitly requested a dark background with cyan shades, glow, and modern effects. To elevate this beyond standard 'cyberpunk', we are merging it with Archetype 5 (Premium Glassmorphism). This creates a 'Neo-Glass' aesthetic: deep void black backgrounds, optical clarity frosted glass, and precise cyan rim lighting. This communicates a futuristic yet professional high-tech command center vibe suited for personal productivity.",
+  "colors": {
+    "background": {
+      "base": "#050505",
+      "surface": "rgba(255, 255, 255, 0.03)",
+      "surface_hover": "rgba(255, 255, 255, 0.06)",
+      "glass": "rgba(15, 15, 20, 0.4)",
+      "glass_border": "rgba(255, 255, 255, 0.08)"
+    },
+    "primary": {
+      "DEFAULT": "#00E5FF",
+      "hover": "#66F0FF",
+      "glow": "rgba(0, 229, 255, 0.3)"
+    },
+    "secondary": {
+      "DEFAULT": "#0088FF",
+      "hover": "#33A3FF"
+    },
+    "accent": {
+      "DEFAULT": "#00FFB2",
+      "warning": "#FFB800",
+      "danger": "#FF3B30"
+    },
+    "text": {
+      "primary": "#FFFFFF",
+      "secondary": "#A1A1AA",
+      "muted": "#71717A"
+    }
+  },
+  "typography": {
+    "fonts": {
+      "heading": "Unbounded",
+      "body": "Manrope",
+      "mono": "JetBrains Mono"
+    },
+    "hierarchy": {
+      "h1": "text-4xl sm:text-5xl font-black tracking-tighter text-white",
+      "h2": "text-2xl sm:text-3xl font-bold tracking-tight text-white",
+      "h3": "text-xl sm:text-2xl font-semibold tracking-tight text-white",
+      "body": "text-base font-medium text-[#A1A1AA] leading-relaxed",
+      "small": "text-sm font-medium text-[#71717A] tracking-wide uppercase",
+      "overline": "text-xs font-bold tracking-[0.2em] text-[#00E5FF] uppercase"
+    }
+  },
+  "spacing_and_layout": {
+    "philosophy": "Generous Spacing Philosophy with Asymmetry. Mobile-first grid.",
+    "containers": "Use p-6 or p-8 inside cards. Never cram text to the edges.",
+    "grid_mode": "Control Room Grid for the dashboard (Density, Data Correlation).",
+    "mobile_nav": "Fixed bottom navigation bar with a glassmorphic background (`backdrop-blur-xl`, `bg-[#050505]/60`, `border-t border-white/10`). Icons must be distinctly spaced and easily tappable."
+  },
+  "components": {
+    "surfaces": {
+      "glass_card": "backdrop-blur-2xl bg-[#0F0F14]/40 border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.5)] rounded-3xl",
+      "glowing_card": "relative group overflow-hidden rounded-3xl backdrop-blur-xl bg-[#050505] border border-[#00E5FF]/20 hover:border-[#00E5FF]/50 transition-colors duration-500 shadow-[0_0_20px_rgba(0,229,255,0.05)] hover:shadow-[0_0_30px_rgba(0,229,255,0.15)]",
+      "ai_suggestion_card": "bg-gradient-to-br from-[#00E5FF]/10 to-transparent border border-[#00E5FF]/30 rounded-2xl p-6 relative overflow-hidden. Use a moving radial gradient background for the 'Tracing Beam' effect."
+    },
+    "buttons": {
+      "primary": "bg-[#00E5FF] text-black font-bold rounded-full px-8 py-4 shadow-[0_0_20px_rgba(0,229,255,0.3)] hover:shadow-[0_0_30px_rgba(0,229,255,0.5)] hover:bg-[#66F0FF] transition-all duration-300",
+      "secondary_glass": "backdrop-blur-md bg-white/5 border border-white/10 text-white hover:bg-white/10 hover:border-[#00E5FF]/50 transition-all duration-300 rounded-full px-8 py-4"
+    },
+    "inputs": {
+      "text": "bg-[#050505] border-b-2 border-white/10 text-white rounded-none px-0 py-3 focus:border-[#00E5FF] focus:ring-0 focus:outline-none transition-colors w-full placeholder:text-white/20 text-lg",
+      "checkbox": "peer h-6 w-6 shrink-0 rounded border border-white/20 bg-transparent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00E5FF] focus-visible:ring-offset-2 focus-visible:ring-offset-[#050505] disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-[#00E5FF] data-[state=checked]:text-black"
+    },
+    "icons": {
+      "library": "@phosphor-icons/react",
+      "style": "Thin or Regular weight, strictly functional. Tints should match state (e.g., #00E5FF for active)."
+    }
+  },
+  "motion": {
+    "hover": "All interactive elements must have a subtle scale up (`hover:scale-[1.02]`) and border/glow color shift.",
+    "page_transitions": "Fade in with a slight upward translation (`translate-y-4` to `translate-y-0`) using Framer Motion.",
+    "lists": "Staggered entrance animations for task lists and habits."
+  },
+  "media": {
+    "images": {
+      "hero_background": {
+        "url": "https://images.pexels.com/photos/12707786/pexels-photo-12707786.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "description": "Abstract image with a dark dynamic tunnel effect in blue tones, conveying motion and depth. Use as a subtle background behind the main dashboard or login screen with low opacity (10-20%) to avoid competing with UI elements."
+      },
+      "secondary_texture": {
+        "url": "https://images.unsplash.com/photo-1759735541630-036eefb7cd3a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njd8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMGRhcmslMjBjeWFuJTIwZ2xvdyUyMGJhY2tncm91bmR8ZW58MHx8fHwxNzc2MTM1ODgwfDA&ixlib=rb-4.1.0&q=85",
+        "description": "Abstract blue and purple light streaks. Good for the AI Smart Suggestion card background or onboarding screens."
+      },
+      "user_avatar": {
+        "url": "https://images.unsplash.com/photo-1764546373114-2d7a87221733?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDJ8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBwcm9maWxlJTIwYXZhdGFyJTIwZGFyayUyMGJhY2tncm91bmR8ZW58MHx8fHwxNzc2MTM1ODY4fDA&ixlib=rb-4.1.0&q=85",
+        "description": "User profile avatar for the settings/header section."
+      }
+    }
+  },
+  "instructions_to_main_agent": [
+    "Strictly adhere to the dark theme with `#050505` base background. Do not use generic gray backgrounds like `bg-gray-900`.",
+    "For the Glassmorphism effect, always pair `backdrop-blur-xl` or `backdrop-blur-2xl` with a highly transparent background (e.g., `bg-white/5` or `bg-black/40`) AND a delicate 1px border (`border-white/10`). Without the border, the glass effect fails.",
+    "Apply cyan glows (`#00E5FF`) sparingly. Use it for primary CTAs, active states, Pomodoro timer progress rings, and AI task suggestions. Overusing it will dilute the premium feel.",
+    "Use Phosphor Icons (`yarn add @phosphor-icons/react`) for all iconography to maintain a clean, high-tech, thin-line aesthetic.",
+    "For the bottom navigation bar (since this is mobile-first), use a fixed glassmorphic panel at the bottom of the screen with clear icon spacing.",
+    "Implement the Time Blocking schedule view using CSS Grid (`grid-cols-[auto_1fr]`). The left column for time labels, the right for draggable task blocks.",
+    "Use Framer Motion (`yarn add framer-motion`) for smooth task list staggering, timer countdowns, and micro-interactions.",
+    "Ensure the AI Smart Task Suggestion stands out by using a subtle animated gradient border or a glowing background mesh (use the secondary_texture image URL provided, clipped to the card).",
+    "All interactive elements MUST include `data-testid` attributes (e.g., `data-testid='add-task-btn'`).",
+    "Never use pure white (#FFFFFF) for body text; use `#A1A1AA` to reduce eye strain, reserving pure white only for headings and active states.",
+    "Do not use TS/TSX syntax. Only implement in plain Javascript (.jsx/.js files).",
+    "Customize the Shadcn calendar component for habit streaks, removing generic borders and utilizing cyan active states instead.",
+    "Customize the Pomodoro timer UI to look like a high-tech glowing ring, leveraging SVG with stroke-dasharray animations."
+  ]
+}
