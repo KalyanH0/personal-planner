@@ -10,7 +10,7 @@ export default function ScheduleView() {
   const [blocks, setBlocks] = useState([]);
   const [tasks, setTasks] = useState([]);
   const [showAdd, setShowAdd] = useState(false);
-  const [form, setForm] = useState({ title: '', start_time: '09:00', end_time: '10:00', color: '#00E5FF' });
+  const [form, setForm] = useState({ title: '', start_time: '09:00', end_time: '10:00', color: '#ffffff' });
 
   const today = new Date().toISOString().split('T')[0];
 
@@ -32,7 +32,7 @@ export default function ScheduleView() {
     try {
       await request('post', '/api/schedule', { ...form, date: today });
       setShowAdd(false);
-      setForm({ title: '', start_time: '09:00', end_time: '10:00', color: '#00E5FF' });
+      setForm({ title: '', start_time: '09:00', end_time: '10:00', color: '#ffffff' });
       load();
     } catch {}
   };
@@ -42,7 +42,7 @@ export default function ScheduleView() {
       await request('post', '/api/schedule', {
         task_id: task.id, title: task.title,
         start_time: '09:00', end_time: '10:00',
-        date: today, color: '#00E5FF'
+        date: today, color: '#ffffff'
       });
       load();
     } catch {}
@@ -138,7 +138,7 @@ export default function ScheduleView() {
             <motion.div className="modal-sheet" initial={{ y: 100 }} animate={{ y: 0 }} exit={{ y: 100 }} onClick={e => e.stopPropagation()}>
               <div className="modal-handle" />
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 20 }}>
-                <h3 style={{ fontFamily: "'Unbounded', cursive", fontSize: 18, color: '#fff' }}>New Time Block</h3>
+                <h3 style={{ fontFamily: "'Manrope', sans-serif", fontSize: 18, color: '#fff' }}>New Time Block</h3>
                 <button onClick={() => setShowAdd(false)} style={{ background: 'none', border: 'none', cursor: 'pointer' }}><X size={22} color="#71717A" /></button>
               </div>
               <form onSubmit={addBlock} style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
@@ -175,7 +175,7 @@ export default function ScheduleView() {
                 <div>
                   <label className="overline" style={{ display: 'block', marginBottom: 6 }}>Color</label>
                   <div style={{ display: 'flex', gap: 8 }}>
-                    {['#00E5FF', '#0088FF', '#00FFB2', '#FFB800', '#FF3B30', '#8800FF'].map(c => (
+                    {['#ffffff', '#0088FF', '#00FFB2', '#FFB800', '#FF3B30', '#8800FF'].map(c => (
                       <button
                         key={c} type="button"
                         style={{
@@ -228,7 +228,7 @@ export default function ScheduleView() {
           background: rgba(15, 15, 20, 0.6);
           border: 1px solid rgba(255,255,255,0.08);
           border-left: 3px solid;
-          border-radius: 12px;
+          border-radius: 8px;
           padding: 8px 12px;
           backdrop-filter: blur(12px);
           overflow: hidden;
@@ -265,7 +265,7 @@ export default function ScheduleView() {
           padding: 8px 14px;
           background: rgba(255,255,255,0.03);
           border: 1px solid rgba(255,255,255,0.08);
-          border-radius: 12px;
+          border-radius: 8px;
           color: #A1A1AA;
           font-size: 12px;
           font-weight: 600;
@@ -276,7 +276,7 @@ export default function ScheduleView() {
         }
         .unsched-chip:hover {
           border-color: rgba(0,229,255,0.3);
-          color: #00E5FF;
+          color: #ffffff;
         }
       `}</style>
     </div>

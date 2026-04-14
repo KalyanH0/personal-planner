@@ -114,7 +114,7 @@ export default function PomodoroTimer() {
   const offset = circumference * (1 - progress);
 
   const modeColors = {
-    work: '#00E5FF',
+    work: '#ffffff',
     short_break: '#00FFB2',
     long_break: '#0088FF',
   };
@@ -214,7 +214,7 @@ export default function PomodoroTimer() {
           <motion.div className="modal-sheet" initial={{ y: 100 }} animate={{ y: 0 }} onClick={e => e.stopPropagation()}>
             <div className="modal-handle" />
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 20 }}>
-              <h3 style={{ fontFamily: "'Unbounded', cursive", fontSize: 18, color: '#fff' }}>Timer Settings</h3>
+              <h3 style={{ fontFamily: "'Manrope', sans-serif", fontSize: 18, color: '#fff' }}>Timer Settings</h3>
               <button onClick={() => setShowSettings(false)} style={{ background: 'none', border: 'none', cursor: 'pointer' }}><X size={22} color="#71717A" /></button>
             </div>
             <form onSubmit={saveSettings} style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
@@ -273,7 +273,7 @@ export default function PomodoroTimer() {
         .timer-settings-btn {
           background: rgba(255,255,255,0.05);
           border: 1px solid rgba(255,255,255,0.08);
-          border-radius: 12px;
+          border-radius: 8px;
           padding: 10px;
           cursor: pointer;
           color: #71717A;
@@ -291,7 +291,7 @@ export default function PomodoroTimer() {
           border: 1px solid rgba(255,255,255,0.08);
           background: transparent;
           color: #71717A;
-          border-radius: 12px;
+          border-radius: 8px;
           font-size: 12px;
           font-weight: 700;
           cursor: pointer;
@@ -400,7 +400,7 @@ export default function PomodoroTimer() {
           outline: none;
           font-family: 'JetBrains Mono', monospace;
         }
-        .settings-input:focus { border-color: #00E5FF; }
+        .settings-input:focus { border-color: #ffffff; }
       `}</style>
     </div>
   );

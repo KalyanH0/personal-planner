@@ -5,13 +5,13 @@ import { Plus, Trash, X, Fire, Check } from '@phosphor-icons/react';
 
 const fadeUp = { hidden: { opacity: 0, y: 12 }, visible: { opacity: 1, y: 0 } };
 
-const HABIT_COLORS = ['#00E5FF', '#0088FF', '#00FFB2', '#FFB800', '#FF3B30', '#8800FF', '#FF6B9D', '#00D68F'];
+const HABIT_COLORS = ['#ffffff', '#0088FF', '#00FFB2', '#FFB800', '#FF3B30', '#8800FF', '#FF6B9D', '#00D68F'];
 
 export default function HabitTracker() {
   const { request } = useApi();
   const [habits, setHabits] = useState([]);
   const [showAdd, setShowAdd] = useState(false);
-  const [form, setForm] = useState({ name: '', icon: 'star', color: '#00E5FF', target_days: 7 });
+  const [form, setForm] = useState({ name: '', icon: 'star', color: '#ffffff', target_days: 7 });
 
   const load = useCallback(async () => {
     try {
@@ -27,7 +27,7 @@ export default function HabitTracker() {
     try {
       await request('post', '/api/habits', form);
       setShowAdd(false);
-      setForm({ name: '', icon: 'star', color: '#00E5FF', target_days: 7 });
+      setForm({ name: '', icon: 'star', color: '#ffffff', target_days: 7 });
       load();
     } catch {}
   };
@@ -125,7 +125,7 @@ export default function HabitTracker() {
             <motion.div className="modal-sheet" initial={{ y: 100 }} animate={{ y: 0 }} exit={{ y: 100 }} onClick={e => e.stopPropagation()}>
               <div className="modal-handle" />
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 20 }}>
-                <h3 style={{ fontFamily: "'Unbounded', cursive", fontSize: 18, color: '#fff' }}>New Habit</h3>
+                <h3 style={{ fontFamily: "'Manrope', sans-serif", fontSize: 18, color: '#fff' }}>New Habit</h3>
                 <button onClick={() => setShowAdd(false)} style={{ background: 'none', border: 'none', cursor: 'pointer' }}><X size={22} color="#71717A" /></button>
               </div>
               <form onSubmit={addHabit} style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
@@ -192,13 +192,13 @@ export default function HabitTracker() {
         }
         .week-today .week-day-num {
           background: rgba(0,229,255,0.1);
-          color: #00E5FF;
+          color: #ffffff;
           border: 1px solid rgba(0,229,255,0.3);
         }
         .week-day-dot {
           width: 4px;
           height: 4px;
-          background: #00E5FF;
+          background: #ffffff;
           border-radius: 50%;
         }
         .habit-list { padding: 0 24px; }
@@ -209,7 +209,7 @@ export default function HabitTracker() {
           padding: 16px;
           background: rgba(255,255,255,0.02);
           border: 1px solid rgba(255,255,255,0.06);
-          border-radius: 16px;
+          border-radius: 8px;
           margin-bottom: 8px;
           transition: all 0.3s;
         }
@@ -224,7 +224,7 @@ export default function HabitTracker() {
         .habit-check-ring {
           width: 44px;
           height: 44px;
-          border-radius: 14px;
+          border-radius: 8px;
           border: 2px solid;
           display: flex;
           align-items: center;

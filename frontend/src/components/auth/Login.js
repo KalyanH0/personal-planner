@@ -43,7 +43,7 @@ export default function Login() {
       >
         <div className="auth-brand">
           <div className="auth-logo-ring">
-            <SignIn size={28} weight="bold" color="#00E5FF" />
+            <SignIn size={28} weight="bold" color="#ffffff" />
           </div>
           <h1 className="auth-title">Personal Planner</h1>
           <p className="auth-tagline">Your intelligent daily planner</p>
@@ -139,7 +139,7 @@ export default function Login() {
           width: 64px;
           height: 64px;
           border: 2px solid rgba(0,229,255,0.3);
-          border-radius: 20px;
+          border-radius: 8px;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -148,7 +148,7 @@ export default function Login() {
           box-shadow: 0 0 30px rgba(0,229,255,0.1);
         }
         .auth-title {
-          font-family: 'Unbounded', cursive;
+          font-family: 'Manrope', sans-serif;
           font-size: 36px;
           font-weight: 900;
           letter-spacing: -0.04em;
@@ -189,7 +189,7 @@ export default function Login() {
           border: 1px solid rgba(255,59,48,0.3);
           color: #FF3B30;
           padding: 12px 16px;
-          border-radius: 12px;
+          border-radius: 8px;
           font-size: 13px;
           font-weight: 500;
         }
@@ -200,7 +200,7 @@ export default function Login() {
           font-size: 14px;
         }
         .auth-switch a {
-          color: #00E5FF;
+          color: #ffffff;
           text-decoration: none;
           font-weight: 600;
         }

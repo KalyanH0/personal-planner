@@ -154,7 +154,7 @@ export default function TaskManager() {
             {completed.map(task => (
               <motion.div key={task.id} variants={fadeUp} layout className="task-item task-done" data-testid={`task-${task.id}`}>
                 <button className="task-check" onClick={() => toggleTask(task.id)} data-testid={`toggle-task-${task.id}`}>
-                  <CheckCircle size={24} weight="fill" color="#00E5FF" />
+                  <CheckCircle size={24} weight="fill" color="#ffffff" />
                 </button>
                 <div className="task-body">
                   <div className="task-title task-title-done">{task.title}</div>
@@ -172,7 +172,7 @@ export default function TaskManager() {
           <motion.div className="modal-overlay" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} onClick={() => { setShowAdd(false); setEditTask(null); }}>
             <motion.div className="modal-sheet" initial={{ y: 100 }} animate={{ y: 0 }} exit={{ y: 100 }} onClick={e => e.stopPropagation()}>
               <div className="modal-handle" />
-              <h3 style={{ fontFamily: "'Unbounded', cursive", fontSize: 18, color: '#fff', marginBottom: 20 }}>
+              <h3 style={{ fontFamily: "'Manrope', sans-serif", fontSize: 18, color: '#fff', marginBottom: 20 }}>
                 {editTask ? 'Edit Task' : 'New Task'}
               </h3>
               <form onSubmit={editTask ? handleUpdate : handleAdd} className="task-form">
@@ -222,8 +222,8 @@ export default function TaskManager() {
             <motion.div className="modal-sheet" initial={{ y: 100 }} animate={{ y: 0 }} exit={{ y: 100 }} onClick={e => e.stopPropagation()}>
               <div className="modal-handle" />
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 16 }}>
-                <h3 style={{ fontFamily: "'Unbounded', cursive", fontSize: 18, color: '#fff' }}>
-                  <Sparkle size={20} color="#00E5FF" style={{ marginRight: 8, verticalAlign: 'middle' }} />
+                <h3 style={{ fontFamily: "'Manrope', sans-serif", fontSize: 18, color: '#fff' }}>
+                  <Sparkle size={20} color="#ffffff" style={{ marginRight: 8, verticalAlign: 'middle' }} />
                   AI Suggestions
                 </h3>
                 <button onClick={() => setShowAI(false)} style={{ background: 'none', border: 'none', cursor: 'pointer' }}>
@@ -232,7 +232,7 @@ export default function TaskManager() {
               </div>
               {aiLoading ? (
                 <div style={{ textAlign: 'center', padding: 40 }}>
-                  <CircleNotch size={32} color="#00E5FF" className="spinner" style={{ animation: 'spin 0.8s linear infinite' }} />
+                  <CircleNotch size={32} color="#ffffff" className="spinner" style={{ animation: 'spin 0.8s linear infinite' }} />
                   <p style={{ marginTop: 12, color: '#71717A' }}>Analyzing your tasks...</p>
                 </div>
               ) : aiSuggestions.length === 0 ? (
@@ -286,7 +286,7 @@ export default function TaskManager() {
           padding: 16px;
           background: rgba(255,255,255,0.02);
           border: 1px solid rgba(255,255,255,0.06);
-          border-radius: 16px;
+          border-radius: 8px;
           margin-bottom: 8px;
           transition: all 0.3s;
         }
@@ -336,7 +336,7 @@ export default function TaskManager() {
           border: 1px solid rgba(255,255,255,0.1);
           background: transparent;
           color: #A1A1AA;
-          border-radius: 12px;
+          border-radius: 8px;
           font-size: 13px;
           font-weight: 600;
           text-transform: capitalize;
@@ -354,7 +354,7 @@ export default function TaskManager() {
           padding: 16px;
           border: 1px solid rgba(0,229,255,0.15);
           background: rgba(0,229,255,0.03);
-          border-radius: 16px;
+          border-radius: 8px;
           margin-bottom: 8px;
         }
         @keyframes spin { to { transform: rotate(360deg); } }

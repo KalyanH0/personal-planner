@@ -62,7 +62,7 @@ export default function BottomNav() {
           cursor: pointer;
           color: #71717A;
           padding: 6px 8px;
-          border-radius: 12px;
+          border-radius: 8px;
           transition: all 0.3s;
           position: relative;
           min-width: 52px;
@@ -71,7 +71,7 @@ export default function BottomNav() {
           color: #A1A1AA;
         }
         .nav-active {
-          color: #00E5FF;
+          color: #ffffff;
         }
         .nav-label {
           font-size: 10px;
@@ -86,7 +86,7 @@ export default function BottomNav() {
           transform: translateX(-50%);
           width: 20px;
           height: 3px;
-          background: #00E5FF;
+          background: #ffffff;
           border-radius: 0 0 4px 4px;
           box-shadow: 0 0 10px rgba(0,229,255,0.5);
         }

@@ -10,7 +10,7 @@
   width: 48px;
   height: 48px;
   border: 3px solid rgba(0, 229, 255, 0.1);
-  border-top-color: #00e5ff;
+  border-top-color: #ffffff;
   border-radius: 50%;
   animation: spin 0.8s linear infinite;
 }
@@ -41,14 +41,14 @@
   -webkit-backdrop-filter: blur(24px);
   background: rgba(15, 15, 20, 0.4);
   border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 24px;
+  border-radius: 8px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
 }
 
 .glow-card {
   position: relative;
   overflow: hidden;
-  border-radius: 24px;
+  border-radius: 8px;
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   background: #050505;
@@ -65,12 +65,12 @@
 
 /* Buttons */
 .btn-primary {
-  background: #00e5ff;
+  background: #ffffff;
   color: #000;
   font-weight: 700;
   font-family: 'Manrope', sans-serif;
   border: none;
-  border-radius: 9999px;
+  border-radius: 8px;
   padding: 14px 32px;
   font-size: 15px;
   cursor: pointer;
@@ -95,7 +95,7 @@
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
   color: #fff;
-  border-radius: 9999px;
+  border-radius: 8px;
   padding: 12px 24px;
   font-size: 14px;
   font-weight: 600;
@@ -125,14 +125,14 @@
   color: rgba(255, 255, 255, 0.2);
 }
 .input-field:focus {
-  border-color: #00e5ff;
+  border-color: #ffffff;
 }
 
 /* Text area */
 .textarea-field {
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 16px;
+  border-radius: 8px;
   color: #fff;
   padding: 16px;
   font-size: 15px;
@@ -144,7 +144,7 @@
   font-family: 'Manrope', sans-serif;
 }
 .textarea-field:focus {
-  border-color: #00e5ff;
+  border-color: #ffffff;
 }
 
 /* Priority badges */
@@ -168,7 +168,7 @@
   font-size: 11px;
   font-weight: 700;
   padding: 4px 10px;
-  border-radius: 9999px;
+  border-radius: 8px;
   text-transform: uppercase;
   letter-spacing: 0.08em;
 }
@@ -178,7 +178,7 @@
   padding: 20px 24px 8px;
 }
 .page-title {
-  font-family: 'Unbounded', cursive;
+  font-family: 'Manrope', sans-serif;
   font-size: 28px;
   font-weight: 800;
   color: #fff;
@@ -196,7 +196,7 @@
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.2em;
-  color: #00e5ff;
+  color: #ffffff;
   text-transform: uppercase;
 }
 
@@ -248,7 +248,7 @@
 .modal-sheet {
   background: #0a0a0f;
   border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 24px 24px 0 0;
+  border-radius: 8px 8px 0 0;
   width: 100%;
   max-width: 480px;
   max-height: 85vh;
@@ -280,7 +280,7 @@
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.1);
   color: #fff;
-  border-radius: 12px;
+  border-radius: 8px;
   padding: 12px 16px;
   font-size: 14px;
   width: 100%;

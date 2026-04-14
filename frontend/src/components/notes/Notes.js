@@ -116,7 +116,7 @@ export default function Notes() {
             <motion.div className="modal-sheet" initial={{ y: 100 }} animate={{ y: 0 }} exit={{ y: 100 }} onClick={e => e.stopPropagation()}>
               <div className="modal-handle" />
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 20 }}>
-                <h3 style={{ fontFamily: "'Unbounded', cursive", fontSize: 18, color: '#fff' }}>
+                <h3 style={{ fontFamily: "'Manrope', sans-serif", fontSize: 18, color: '#fff' }}>
                   {editNote ? 'Edit Entry' : 'New Entry'}
                 </h3>
                 <button onClick={() => { setShowAdd(false); setEditNote(null); }} style={{ background: 'none', border: 'none', cursor: 'pointer' }}><X size={22} color="#71717A" /></button>
@@ -174,7 +174,7 @@ export default function Notes() {
           padding: 18px;
           background: rgba(255,255,255,0.02);
           border: 1px solid rgba(255,255,255,0.06);
-          border-radius: 16px;
+          border-radius: 8px;
           margin-bottom: 8px;
           transition: all 0.3s;
         }

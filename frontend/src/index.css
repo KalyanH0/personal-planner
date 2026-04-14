@@ -5,7 +5,7 @@
   --bg-surface: rgba(255, 255, 255, 0.03);
   --bg-glass: rgba(15, 15, 20, 0.4);
   --glass-border: rgba(255, 255, 255, 0.08);
-  --primary: #00e5ff;
+  --primary: #ffffff;
   --primary-hover: #66f0ff;
   --primary-glow: rgba(0, 229, 255, 0.3);
   --secondary: #0088ff;
@@ -50,7 +50,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Unbounded', cursive;
+  font-family: 'Manrope', sans-serif;
   color: var(--text-primary);
 }
 
